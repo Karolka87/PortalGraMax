@@ -54,6 +54,10 @@ public class PortalGraMax {
             if (wynik.equals("trafiony")) {
                 break;
             }
+            if(wynik.equals("zatopiony")) {
+                listaPortali.remove(portalDoSprawdzenia);
+                break;
+            }
         }
         System.out.println(wynik);
     }
@@ -145,12 +149,13 @@ class PomocnikGry {
                     }
                     if (x > 0 & (polozenie % dlugoscPlanszy == 0)) {
                         powodzenie = false;
-                    } else {
+                    }
+                }
+                else {
                         powodzenie = false;
                     }
                 }
             }
-        }
             int x = 0;
             int wiersz = 0;
             int kolumna = 0;
